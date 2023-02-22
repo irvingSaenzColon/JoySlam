@@ -1,0 +1,245 @@
+:root{
+ --indigo-duye:     #153B50;
+ --pacific-blue:    #06C1DA;   
+ --sizzing-red:     #FF2C55;
+ --rural-red:       #C31545;
+ --rouge:           #a1153d;
+ --dark-sienna:     #5f0d23;
+ --white:           #FAFAFA;
+
+ /* C31545 */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Chewy', cursive;;
+}
+
+h1{
+    font-size: 5.6rem;
+    letter-spacing: 5px;
+    text-align: center; 
+    font-family: 'Fredoka One', cursive;
+}
+
+button,
+textarea{
+    font-family: 'Fredoka One', cursive;
+}
+
+.title {
+    color: var(--white);
+    text-shadow: 
+    0 1px 0 #CCCCCC, 
+    0 2px 0 #c9c9c9, 
+    0 3px 0 #bbb, 
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+    color: #FFFFFF;
+    background: #0e8dbc;
+}
+
+/* Menu CSS */
+.menu{
+    display: block;
+    position: relative;
+    width: 600px;
+    margin: auto;
+    border: none;
+}
+
+.menu__button-box{
+    position: relative;
+    width: fit-content;
+}
+
+.menu__button{
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: block;
+    min-width: 250px;
+    min-height: 80px;
+    border: none;
+    transform: skew(20deg);
+    font-size: 4.2rem;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    background-color: var(--sizzing-red);
+    z-index: 1;
+}
+
+.menu__button-box:hover > .menu__button{
+    animation-name: main-btn-hover;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.menu__button>span:first-of-type{
+    position: absolute;
+    top: 40px;
+    left: -22px;
+    transform: rotate(90deg) skew(45deg) scaleX(3.3);
+    display: block;
+    width: 25px;
+    height: 21px;
+    background-color: var(--rouge);
+}
+
+.menu__button>span:last-of-type{
+    position: absolute;
+    bottom: -21px;
+    left: -10px;
+    transform: skewX(-45deg) ;
+    display: block;
+    width: 250px;
+    height: 21px;
+    background-color: var(--rural-red);
+}
+
+.menu__button--right{
+    transform: skew(-20deg);
+    min-width: 80px;
+    left: unset;
+}
+
+.menu__button--right>img{
+    transform: skew(20deg) translateX(-5px);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+}
+
+.menu__button--right>span:first-of-type{
+    position: absolute;
+    top: 12px;
+    right: -24px;
+    left: unset;
+    transform: skewY(45deg);
+    display: block;
+    width: 25px;
+    height: 80px;
+    background-color: var(--rouge);
+}
+
+.menu__button--right>span:last-of-type{
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    right: -12px;
+    left: unset;
+    transform: skewX(45deg) ;
+    width: 80px;
+    height: 25px;
+    background-color: var(--rural-red);
+}
+
+.menu__button-box:hover > .menu__button--right{
+    animation-name: secondary-btn-hover;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+.menu__button::before{
+    content: attr(data-label);
+    text-shadow: 
+    -1px 1px 1px #bebebe,
+    -2px 2px 0 #bdbdbd, 
+    -3px 3px 0 #b2b2b2, 
+    -4px 4px 0 #a7a7a7, 
+    -5px 5px 0 #8f8f8f,
+    -6px 6px 1px rgba(0,0,0,.1),
+    -7px 6px 5px rgba(0,0,0,.1), 
+    -8px 6px 3px rgba(0,0,0,.3), 
+    -9px 6px 5px rgba(0,0,0,.2), 
+    -10px 6px 10px rgba(0,0,0,.25), 
+    -11px 10px 10px rgba(0,0,0,.2), 
+    -12px 20px 20px rgba(0,0,0,.15);;
+}
+
+.menu__button-shadow{
+    position: absolute;
+    top: 45px;
+    left: -45px;
+    min-width: 250px;
+    min-height: 80px;
+    transform: skew(20deg);
+    background-color: var(--dark-sienna);
+}
+
+.menu__button-shadow--right{
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    min-width: 80px;
+    min-height: 80px;
+    transform: skew(-20deg);
+    background-color: var(--dark-sienna);
+}
+
+@keyframes main-btn-hover {
+    0%{
+        top: 0;
+        left: 0;
+    }
+
+    35%{
+        top: -15px;
+        left: 15px;
+    }
+
+    100%{
+        left: -33px;
+        top: 24px;
+    }
+}
+
+@keyframes main-btn-hover-out {
+    0%{
+        left: -33px;
+        top: 24px;
+    }
+
+    65%{
+        top: -15px;
+        left: 15px;
+    }
+
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes secondary-btn-hover {
+    0%{
+        top: 0;
+        right: 0;
+        
+    }
+
+    35%{
+        top: -15px;
+        right: 15px;
+    }
+
+    100%{
+        right: -33px;
+        top: 24px;
+    }
+}
