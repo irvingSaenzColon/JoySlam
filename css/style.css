@@ -23,7 +23,6 @@ html{
 
 h1{
     font-size: 5.6rem;
-    letter-spacing: 5px;
     text-align: center; 
     font-family: 'Fredoka One', cursive;
 }
@@ -33,7 +32,26 @@ textarea{
     font-family: 'Fredoka One', cursive;
 }
 
+header{
+    position: relative;
+    text-align: center;
+    margin: 24px 0;
+}
+
+header>img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+}
+
 .title {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 110px;
+    padding: 16px;
     color: var(--white);
     text-shadow: 
     0 1px 0 #CCCCCC, 
@@ -49,21 +67,71 @@ textarea{
     0 10px 10px rgba(0,0,0,.2), 
     0 20px 20px rgba(0,0,0,.15);
     color: #FFFFFF;
-    background: #0e8dbc;
+}
+
+.title>span:nth-child(2), 
+.title>span:nth-child(6){
+    transform: translateY(10px);
+}
+
+.title>span:nth-child(3), 
+.title>span:nth-child(5){
+    transform: translateY(15px);
+}
+
+.title>span:nth-child(4){
+    transform: translateY(25px);
+}
+
+.title_letter--jump{
+    animation-name: letter-jump;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 /* Menu CSS */
 .menu{
     display: block;
     position: relative;
-    width: 600px;
+    width: 100%;
+    height: 100vh;
     margin: auto;
     border: none;
+}
+
+.menu__options{
+    position: fixed;
+}
+
+.menu__options--flex{
+    display: flex;
+    gap: 35px;
+}
+
+.menu__options--right-down{
+    right: 150px;
+    bottom: 200px;
+}
+
+.menu__options--left-down{
+    bottom: 150px;
+    left: 150px;
 }
 
 .menu__button-box{
     position: relative;
     width: fit-content;
+    z-index: 3;
+}
+
+.menu__button-box--first{
+    transform: translateY(50px);
+}
+
+.menu__button-box--last{
+    transform: translateY(-50px);
 }
 
 .menu__button{
@@ -192,6 +260,7 @@ textarea{
     background-color: var(--dark-sienna);
 }
 
+/* Animations */
 @keyframes main-btn-hover {
     0%{
         top: 0;
@@ -241,5 +310,19 @@ textarea{
     100%{
         right: -33px;
         top: 24px;
+    }
+}
+
+@keyframes letter-jump {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0);
     }
 }

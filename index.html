@@ -11,30 +11,54 @@
     <title>Inicial</title>
 </head>
 <body>
-    <h1 class="title">JoySlam</h1>
+    <header>
+        <img src="./assets/icons/flag.svg" alt="">
+        <h1 class="title">
+            <span>J</span>
+            <span>o</span>
+            <span>y</span>
+            <span>S</span>
+            <span>l</span>
+            <span>a</span>
+            <span>m</span>
+        </h1>
+    </header>
     <dialog class="menu">
-        <section class="menu__button-box">
-            <button class="menu__button" data-label="Jugar">
-                <span></span>
-                <span></span>
-            </button>
-            <div class="menu__button-shadow"></div>
+        <section class="menu__options menu__options--left-down">
+            <div class="menu__button-box">
+                <button class="menu__button" data-label="Jugar">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu__button-shadow"></div>
+            </div>
         </section>
-        <section class="menu__button-box">
-            <button class="menu__button menu__button--right">
-                <img src="./assets/icons/gear.svg" alt="">
-                <span></span>
-                <span></span>
-            </button>
-            <div class="menu__button-shadow--right"></div>
+        <section class="menu__options menu__options--flex menu__options--right-down">
+            <div class="menu__button-box menu__button-box--first">
+                <button class="menu__button menu__button--right">
+                    <img src="./assets/icons/gear.svg" alt="">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu__button-shadow--right"></div>
+            </div>
+            <div class="menu__button-box">
+                <button class="menu__button menu__button--right">
+                    <img src="./assets/icons/Medal.svg" alt="">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu__button-shadow--right"></div>
+            </div>
+            <div class="menu__button-box menu__button-box--last">
+                <button class="menu__button menu__button--right">
+                    <img src="./assets/icons/person.svg" alt="">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu__button-shadow--right"></div>
+            </div>
         </section>
-        <section class="menu__button-box">
-            <button>
-                <span></span>
-                <span></span>
-            </button>
-        </section>
-        <button></button>
     </dialog>
     <dialog>
 
@@ -43,6 +67,8 @@
     <dialog>
         
     </dialog>
+
+    <canvas id = 'canvas'></canvas>
 
 </body>
 </html>
