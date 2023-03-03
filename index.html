@@ -23,7 +23,7 @@
             <span>m</span>
         </h1>
     </header>
-    <dialog class="menu">
+    <dialog id="main-menu" class="menu inactive">
         <section class="menu__options menu__options--left-down">
             <div class="menu__button-box">
                 <button class="menu__button" data-label="Jugar">
@@ -34,7 +34,7 @@
             </div>
         </section>
         <section class="menu__options menu__options--flex menu__options--right-down">
-            <div class="menu__button-box menu__button-box--first">
+            <div class="menu__button-box menu__button-box--first inactive">
                 <button class="menu__button menu__button--right">
                     <img src="./assets/icons/gear.svg" alt="">
                     <span></span>
@@ -60,15 +60,186 @@
             </div>
         </section>
     </dialog>
-    <dialog>
-
+    <dialog id="scores" class="menu inactive">
+        <section class="return-section">
+            <button class="return-btn return-btn--left">Regresar</button>
+        </section>
+       <section class="contaner-title">
+            <div class="subtitle-section">
+                <h2 class="subtitle">
+                    Puntuaciones
+                </h2>
+            </div>
+       </section>
+        <section class="score-section score-section--left">
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntuación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Once</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Don Chungo</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Minish</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Brocoli</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>La Maquina</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Dijillo</td>
+                        <td>650</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span></span>
+            <span></span>
+        </section>
+        <section class="score-section">
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntuación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Once</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Don Chungo</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Minish</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Brocoli</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>La Maquina</td>
+                        <td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Dijillo</td>
+                        <td>650</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span></span>
+            <span></span>
+        </section>
+    </dialog>
+    <dialog id="game-mode" class="menu">
+        <section class="return-section inactive">
+            <button class="return-btn return-btn--left">Regresar</button>
+        </section>
+        <section class="subtitle subtitle-simple">
+            <h2>Configuraciones</h2>
+        </section>
+        <section class="configuration-section">
+            <button class="play-btn">Jugar</button>
+            <form class="game-configuration">
+                <div class="game-configuration__options">
+                    <label class="game-configuration__title" >Modo de juego</label>
+                    <label class="game-configuration__radio" for="">
+                        <span>Carrera</span>
+                        <input type="radio" name="" id="">
+                    </label>
+                    <labe class="game-configuration__radio" for="">
+                        <span>Manchado</span>
+                        <input type="radio" name="" id="">
+                    </label>
+                </div>
+                <div class="game-configuration__options">
+                    <label class="game-configuration__title" >Modo de juego</label>
+                    <label class="game-configuration__radio" for="">
+                        <span>Un jugador</span>
+                        <input type="radio" name="" id="">
+                    </label>
+                    <labe class="game-configuration__radio" for="">
+                        <span>Multijugador</span>
+                        <input type="radio" name="" id="">
+                    </label>
+                </div>
+                <div class="game-configuration__options">
+                    <label class="game-configuration__title">Dificultad</label>
+                    <label class="game-configuration__radio" for="">
+                        <span>Normal</span>
+                        <input type="radio" name="" id="">
+                    </label>
+                    <label class="game-configuration__radio" for="">
+                        <span>Difícil</span>
+                        <input type="radio" name="" id="">
+                    </label>
+                </div>
+                <div class="game-configuration__options">
+                    <label class="game-configuration__title">Nivel</label>
+                    <label class="game-configuration__radio game-configuration__radio--cover" for="">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>Nivel 1</figcaption>
+                        </figure>
+                        <input type="radio" name="level" id="">
+                    </label>
+                    <label class="game-configuration__radio game-configuration__radio--cover" for="">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>Nivel 2</figcaption>
+                        </figure>
+                        <input type="radio" name="level" id="">
+                    </label>
+                     <label class="game-configuration__radio game-configuration__radio--cover" for="">
+                        <figure>
+                            <img src="" alt="">
+                            <figcaption>Nivel 3</figcaption>
+                        </figure>
+                        <input type="radio" name="level" id="">
+                    </label>
+                </div>
+            </form>
+        </section>
+        <section></section>
+    </dialog>
+    <dialog id="pause" class="menu menu--pause inactive">
+        <form class="pause-form">
+            <label class="game-configuration__title game-configuration__title--bg game-configuration__title--center">Pausa</label>
+            <button class="pause-form__option">Reanudar</button>
+            <button class="pause-form__option">Volver al menú principal</button>
+        </form>
     </dialog>
 
-    <dialog>
-        
-    </dialog>
-
-    <canvas id = 'canvas'></canvas>
+    <main class="game-main inactive">
+        <section class="ui">
+            <div class="ui__score">
+                <span>Score</span>
+                <span>1500</span>
+            </div>
+            <div class="ui__item">
+                <span>Item</span>
+                <img src="" alt="">
+            </div>
+        </section>
+        <canvas id ="canvas"></canvas>
+    </main>
 
 </body>
 </html>
