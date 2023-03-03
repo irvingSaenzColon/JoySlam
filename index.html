@@ -23,10 +23,10 @@
             <span>m</span>
         </h1>
     </header>
-    <dialog id="main-menu" class="menu inactive">
+    <dialog id="main-menu" class="menu">
         <section class="menu__options menu__options--left-down">
             <div class="menu__button-box">
-                <button class="menu__button" data-label="Jugar">
+                <button id="start-play-btn" class="menu__button" data-label="Jugar">
                     <span></span>
                     <span></span>
                 </button>
@@ -42,7 +42,7 @@
                 </button>
                 <div class="menu__button-shadow--right"></div>
             </div>
-            <div class="menu__button-box">
+            <div id="start-score-btn" class="menu__button-box">
                 <button class="menu__button menu__button--right">
                     <img src="./assets/icons/Medal.svg" alt="">
                     <span></span>
@@ -62,7 +62,7 @@
     </dialog>
     <dialog id="scores" class="menu inactive">
         <section class="return-section">
-            <button class="return-btn return-btn--left">Regresar</button>
+            <button id="return-score" class="return-btn return-btn--left">Regresar</button>
         </section>
        <section class="contaner-title">
             <div class="subtitle-section">
@@ -148,15 +148,15 @@
             <span></span>
         </section>
     </dialog>
-    <dialog id="game-mode" class="menu">
-        <section class="return-section inactive">
-            <button class="return-btn return-btn--left">Regresar</button>
+    <dialog id="game-mode" class="menu inactive">
+        <section class="return-section">
+            <button id="returnConfiguration" class="return-btn return-btn--left return-btn--bottom">Regresar</button>
         </section>
-        <section class="subtitle subtitle-simple">
+        <section class="subtitle subtitle-simple subtitle-simple--top">
             <h2>Configuraciones</h2>
         </section>
         <section class="configuration-section">
-            <button class="play-btn">Jugar</button>
+            <button id="play-btn" class="play-btn">Jugar</button>
             <form class="game-configuration">
                 <div class="game-configuration__options">
                     <label class="game-configuration__title" >Modo de juego</label>
@@ -220,14 +220,13 @@
         <section></section>
     </dialog>
     <dialog id="pause" class="menu menu--pause inactive">
-        <form class="pause-form">
+        <div class="pause-form">
             <label class="game-configuration__title game-configuration__title--bg game-configuration__title--center">Pausa</label>
-            <button class="pause-form__option">Reanudar</button>
-            <button class="pause-form__option">Volver al menú principal</button>
-        </form>
+            <button id="resume-game" class="pause-form__option">Reanudar</button>
+            <button id="pause-return" class="pause-form__option">Volver al menú principal</button>
+        </div>
     </dialog>
-
-    <main class="game-main inactive">
+    <main id="game-screen" tabindex="0" class="game-main inactive">
         <section class="ui">
             <div class="ui__score">
                 <span>Score</span>
@@ -241,5 +240,6 @@
         <canvas id ="canvas"></canvas>
     </main>
 
+    <script src="./js/main.js"></script>
 </body>
 </html>
